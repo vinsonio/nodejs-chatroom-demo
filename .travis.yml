@@ -1,0 +1,22 @@
+language: node_js
+# nodejs版本
+node_js: 
+    - '8'
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+before_script:
+
+script:
+  - npm run test
+
+branches:
+  only:
+    - master
